@@ -1,2 +1,2 @@
 # Image2CSS
-Convert images to pure css using CV2.
+Convert images to pure css using Pillow.
