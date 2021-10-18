@@ -1,2 +1,2 @@
 # Image2CSS
-Convert images to pure css using Pillow.
+Simple tool that converts Images to pure css files.
