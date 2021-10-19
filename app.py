@@ -1,5 +1,5 @@
 from PIL import Image #PILLOW- Python library that adds support for opening, manipulating, and saving many different image file formats.
-
+from tqdm import tqdm #For conversion progress preview on CLI
 
 def listToString(s):
 
@@ -7,7 +7,8 @@ def listToString(s):
     str1 = ""
 
     # traverse in the string
-    for ele in s:
+    print("Rendering box shadow:")
+    for ele in tqdm(s):
         str1 += ele
 
     # return string
@@ -15,7 +16,6 @@ def listToString(s):
 
 
 def write_css(box_shadow):
-    print('Writing css')
     css = '''body {
     background: black;  
     display:flex;
@@ -31,6 +31,7 @@ def write_css(box_shadow):
 
     with open('style.css', 'w') as fh:
         fh.write(css)
+    print("CSS Saved!!!")
 
 
 img = Image.open('./sign.jpg') # open()- To load an image from a file
@@ -39,9 +40,9 @@ width, height = img.size
 
 
 box_shadow = [] # List Initializatin
-for y in range(0, height, 2):      # this row
+print("\nConverting image to CSS \nExtracting pixels:")
+for y in tqdm(range(0, height, 2)):      # this row
     for x in range(0, width, 2):
-        print('.')
         r, g, b = pixels[x, y]
         hexv = f"#{r:02x}{g:02x}{b:02x}" # Hexcode parsing
         box_shadow.append(f'\n{x}px  {y}px 4px 5px {hexv},')
