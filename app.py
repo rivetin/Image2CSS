@@ -30,15 +30,14 @@ def write_css(box_shadow):
     with open('style.css','w') as fh:
         fh.write(css)
 
-img = Image.open('./sign.jpg')
+img = Image.open('./cssmeme.jpg')
 pixels = img.load() 
 width, height = img.size
 
 
 box_shadow = []
-for y in range(0,height,2):      # this row
-    for x in range(0,width,2):  
-        print('.') 
+for y in range(0,height,5):      # this row
+    for x in range(0,width,5):  
         r, g, b = pixels[x, y]
         hexv = f"#{r:02x}{g:02x}{b:02x}"
         box_shadow.append(f'\n{x}px  {y}px 4px 5px #{r:02x}{g:02x}{b:02x},')
