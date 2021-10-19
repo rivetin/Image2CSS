@@ -44,7 +44,7 @@ for y in range(0, height, 2):      # this row
         print('.')
         r, g, b = pixels[x, y]
         hexv = f"#{r:02x}{g:02x}{b:02x}" # Hexcode parsing
-        box_shadow.append(f'\n{x}px  {y}px 4px 5px hexv,')
+        box_shadow.append(f'\n{x}px  {y}px 4px 5px {hexv},')
 
 
 box_shadow = listToString(box_shadow)
