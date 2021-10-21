@@ -35,3 +35,78 @@ body{
     text-shadow: 0 0 50px #FF0000, 0 0 100px #0000FF;
     
 }
+.btn-file {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+.btn-file__actions {
+  margin: 0;
+  padding: 0;
+}
+.btn-file_actions_item {
+  padding: 35px;
+  font-size: 1.5em;
+  color: #d3e0e9;
+  cursor: pointer;
+  text-decoration: none;
+  border-top: 3px dashed #d3e0e9;
+  border-left: 3px dashed #d3e0e9;
+  border-bottom: 3px dashed #d3e0e9;
+}
+.btn-file_actions_item:first-child {
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+.btn-file_actions_item:last-child {
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  border-right: 3px dashed #d3e0e9;
+}
+.btn-file_actions_item:hover,
+.btn-file_actions_item:focus {
+  color: #636b6f;
+  background-color: rgba(211, 224, 233, 0.1);
+}
+.btn-file_actions_item:hover--shadow,
+.btn-file_actions_item:focus--shadow {
+  box-shadow: #d3e0e9 0 0 60px 15px;
+}
+.btn-file_actions_item--shadow {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.btn-file_actions_item--shadow::before {
+  content: " ";
+  box-shadow: #fff 0 0 60px 40px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.btn-file__preview {
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 35px;
+  background-size: cover;
+  background-position: center;
+}
+.form-group label.attachment {
+  width: 100%;
+}
+.form-group label.attachment .btn-create > a,
+.form-group label.attachment .btn-create > div {
+  margin-top: 5px;
+}
+.form-group label.attachment input[type="file"] {
+  display: none;
+}
