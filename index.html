@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
-</head>
-<body>
-    <div class="container">
-        <div class="d-flex justify-content-center">
-            <div class="mt-5">
-                <div class="bg-title ml-n3 mb-2 darkmode-ignore"></div>
-                <h3 class="text-dark title mt-n5 darkmode-ignore">img2css</h3>
-                <p class="text-muted">Tool to convert images to pure css, built in python.</p>
-                <div class="drag-area text-left">
-                    <span class="header">Drop an image here</span>
-                    <span class="header">or <span class="button darkmode-ignore">click to select</span></span>
-                    <input type="file" hidden />
-                    <span class="support">Supports: JPEG, JPG, PNG</span>
-                  </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <!--Dark Mode Integration-->
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script>
-      function addDarkmodeWidget() {
-        const options = {
-            bottom: '64px', // default: '32px'
-            right: 'unset', // default: '32px'
-            left: '32px', // default: 'unset'
-            time: '0.5s', // default: '0.3s'
-            mixColor: '#fff', // default: '#fff'
-            backgroundColor: '#fff',  // default: '#fff'
-            buttonColorDark: '#100f2c',  // default: '#100f2c'
-            buttonColorLight: '#fff', // default: '#fff'
-            saveInCookies: false, // default: true,
-            label: '🌓', // default: ''
-            autoMatchOsTheme: true // default: true
-        }
-        new Darkmode(options).showWidget();
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Title</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <div class="mt-5">
+        <div class="bg-title ml-n3 mb-2 darkmode-ignore"></div>
+        <h3 class="text-dark title mt-n5 darkmode-ignore">img2css</h3>
+        <p class="text-muted">Tool to convert images to pure css, built in python.</p>
+        <div class="drag-area text-left">
+          <span class="header">Drop an image here</span>
+          <span class="header">or <span class="button darkmode-ignore">click to select</span></span>
+          <input type="file" hidden />
+          <span class="support">Supports: JPEG, JPG, more comming soon.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <!--Dark Mode Integration-->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script>
+    function addDarkmodeWidget() {
+      const options = {
+        bottom: '64px', // default: '32px'
+        right: '32px', // default: '32px'
+        left: 'unset', // default: 'unset'
+        time: '1s', // default: '0.3s'
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#100f2c',  // default: '#100f2c'
+        buttonColorLight: '#fff', // default: '#fff'
+        saveInCookies: false, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
       }
-      window.addEventListener('load', addDarkmodeWidget);
-    </script>
+      new Darkmode(options).showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
+  </script>
 
 </body>
+
 </html>
