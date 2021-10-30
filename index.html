@@ -6,36 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Description" content="Enter your description here" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="assets/preloader/js/jquery.min.js"></script>
+  <script src="assets/preloader/js/jquery.oLoader.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Title</title>
+  <title>Img2css</title>
 </head>
 
-<body>
+<body id="preloader">
   <div class="container">
     <div class="d-flex justify-content-center">
       <div class="mt-5">
         <div class="bg-title ml-n3 mb-2 darkmode-ignore"></div>
         <h3 class="text-dark title mt-n5 darkmode-ignore">img2css</h3>
         <p class="text-muted">Tool to convert images to pure css, built in python.</p>
-        <div class="drag-area text-left">
+        <div class="drag-area text-left" id="drag-area">
           <span class="header">Drop an image here</span>
-          <span class="header">or <span class="button darkmode-ignore">click to select</span></span>
+          <span class="header">or <span class="button darkmode-ignore" onClick="inputClick()">click to select</span></span>
           <input type="file" hidden />
           <span class="support">Supports: JPEG, JPG, more comming soon.</span>
         </div>
+        <a onClick="removeImg()" class="btn-1 text-dark rounded" id="remove-btn">Remove</a>
       </div>
     </div>
   </div>
 
   <script src="assets/js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
   <!--Dark Mode Integration-->
   <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
   <script>
+
+    $( document ).ready(function() {
+      $("#remove-btn").hide();
+    });
+
+    $('#preloader').oLoader({
+      backgroundColor: '#000000f6',
+      fadeInTime: 500,
+      fadeLevel: 0.8,
+      image: 'assets/img/preloader.gif',
+      style: 2,
+      imagePadding: 5,
+      imageBgColor: 'transparent',
+      hideAfter: 2000
+    });
+
+    function removeImg()
+    {
+      dropArea.classList.remove('active');
+      dropArea.innerHTML = '<span class="header">Drop an image here</span><span class="header">or <span class="button darkmode-ignore" onClick="inputClick()">click to select</span></span><input type="file" hidden /><span class="support">Supports: JPEG, JPG, more comming soon.</span>';
+      $('#drag-area').oLoader('hide');
+    }
+
     function addDarkmodeWidget() {
       const options = {
         bottom: '64px', // default: '32px'

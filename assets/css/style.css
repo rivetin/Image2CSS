@@ -10,12 +10,25 @@
 body
 {
     background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
 }
 
 .bg-title{
     height: 50px;
     width: 198px;
     background-color: #38EEB7;
+}
+
+.btn-1{
+  background-color: #38EEB7;
+  height: 10px;
+  width: 50px;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 5px;
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
 .darkmode-ignore{
@@ -81,5 +94,19 @@ h3 {
 .drag-area img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+#oloader_loader_0_1 img{
+  height: 50px !important;
+  width: 50px !important;
+}
+
+#oloader_loader_1_1 img{
+  height: 50px !important;
+  width: 50px !important;
+}
+
+#oloader_overlay_1_1{
+  height: 200px !important;
 }
